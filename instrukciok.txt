@@ -1,0 +1,142 @@
+Szia!
+
+Könyvtárstruktúra:
+
+/assets
+    - css (stílus fájlok)
+    - js (javascript fájlok)
+    - fonts (betűtípusok)
+        - montserrat (pl. betűtípus)
+/uploads (jpg, png, svg, stb... CMS-ben ezt a könyvtárat lehet adminisztrálni)
+/index.html
+
+----------------
+
+Nem kell package manager, ne kelljen css módosításkor a teljes projektet build-elni.
+
+---------------
+
+A css összeépítés viszont Sass-al legyen.
+
+A /css könyvtáron belül legyen egy generate.bat nevű fájl, amelynek a tartalma:
+sass --no-source-map entry.scss style.min.css --watch --style=compressed
+
+Ez a sima npm-es sass (npm install -g sass)
+
+Az entry.scss:
+@use "variables" as v;
+@import "mixins.scss";
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html {
+  @include xs {
+    font-size: 14px;
+  }
+
+  @include sm {
+    font-size: 14px;
+  }
+
+  @include md {
+    font-size: 15px;
+  }
+
+  @include lg {
+    font-size: 16px;
+  }
+
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  width: 100%;
+  font-family: v.$default-font-family;
+  font-weight: v.$default-font-weight;
+  font-smooth: auto;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+variables.scss:
+$default-font-family: 'Montserrat';
+$light-font-weight: 300;
+$default-font-weight: 400;
+$medium-font-weight: 600;
+$semibold-font-weight: 700;
+$bold-font-weight: 800;
+$extra-bold-font-weight: 900;
+
+mixins.scss:
+Ezek legyenek a kijelző határok:
+
+@mixin xs {
+  @media (min-width: 0px) and (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: 600px) and (max-width: 959px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: 960px) and (max-width: 1263px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: 1264px) and (max-width: 1903px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: 1904px) {
+    @content;
+  }
+}
+
+A betűméretek rem-ben legynek megadva.
+
+---------------
+
+Ha vektoros képet kell beépíteni a html-be, akkor az legyen külső svg fájl, ne beépített svg kód.
+Ha egyszínű svg-t kell színezni, akkor az #000 színnel legyen lementve, és filter legyen ráhúzva:
+https://codepen.io/sosuke/pen/Pjoqqp
+
+---------------
+
+Képek beépítése:
+  <picture>
+    <source srcset="uploads/a.webp"/>
+    <img src="uploads/a.jpg" alt=""/>
+  </picture>
+
+Minden képnek legyen egy webp verziója.
+
+---------------
+
+Js fájlokat nem kell összebuild-elni. Legyen külön jquery, swiper, stb... legyen a js könyvtáron belül egy site.js.
+
+(function ($) {
+  "use strict";
+
+  $(document).ready(function () {
+  });
+
+})(jQuery);
+
+---------------
+
+Korábban valamelyik projektben a tailwind css volt használva. Használható ez is, csak valahogy úgy legyen megoldva, ha lehet, hogy az összes stílus definíció használható legyen belőle. 

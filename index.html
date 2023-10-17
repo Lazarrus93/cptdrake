@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/map.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Hero -->
+    <section class="section-hero">
+        <header class="hero-inner">
+        <!-- Slider main container -->
+        <div class="swiper">
+
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <picture>
+                        <source srcset="assets/uploads/background1.webp"/>
+                        <img src="assets/uploads/background1.jpg" alt=""/>
+                      </picture>
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source srcset="assets/uploads/background2.webp"/>
+                        <img src="assets/uploads/background2.jpg" alt=""/>
+                      </picture>
+                </div>
+
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+        <div class="container">
+            <div class="hero-content  flex">
+                <div class="logo-container">
+                    <img class="logo" src="assets/uploads/logo.webp">
+                </div>
+                <nav class="hero-navigation">
+                    <div class="nav-first flex">
+                        <a href="#" class="hero-nav--text">
+                            9025 Győr, Radó sétány 1.
+                        </a>
+                        <a href="#" class="hero-nav--text">
+                            +36202783229
+                        </a>
+                        <a href="#" class="hero-nav--text">
+                            recepcio@aranyszarvasgyor.hu
+                        </a>
+                        <a href="#" class="hero-nav--text with-logo"><img class="social-logo" src="assets/uploads/facebook.png"
+                                alt="facebook logo"> aranyszarvasfogadogyor</a>
+                        <a href="#" class="hero-nav--text with-logo"><img class="social-logo" src="images/instagram.png"
+                                alt="instagram logo"> captaindrakespub</a>
+                    </div>
+                    <div class="nav-second flex">
+                        <a href="#" class="hero-nav--text">kezdőlap</a>
+                        <a href="#" class="hero-nav--text">rolunk </a>
+                        <div class="dropdown">
+                            <a href="#" class="hero-nav--text dropdown-btn">étterem </a>
+                            <div class="dropdown-content">
+                                <a href="#" class="hero-nav--text uppercase">heti menu </a>
+                                <a href="#" class="hero-nav--text uppercase">etlap/itallap </a>
+                            </div>
+
+                        </div>
+                        <a href="#" class="hero-nav--text">hotel</a>
+                        <a href="#" class="hero-nav--text">vendegek</a>
+                        <a href="#" class="hero-nav--text">galéria</a>
+                        <a href="#" class="hero-nav--text">Események</a>
+                        <a href="#" class="hero-nav--text">karrier</a>
+                        <a href="#" class="hero-nav--text">kapcsolat</a>
+                        <a href="#" class="hero-nav--text with-logo active-button"><img class="social-logo"
+                                src="images/booking.png">foglalás</a>
+                    </div>
+                </nav>
+
+            </div>
+            <div class="hero-heading-container">
+            <div class="flex hero-heading-wrapper">
+                <h1 class="hero-heading">
+                    Fedezze fel <br>a Radó-szigetben rejlő szépségeket!
+                </h1>
+            </div>
+        </div>
+        </div>
+        </header>
+
+
+    </section>
+    <section class="section-reservation">
+
+        <main class="reservation-container container">
+            <nav class="reservation-switch flex">
+                <a href="#" class="table-booking ">
+                    asztalfoglalás
+                </a>
+                <a href="#" class="table-booking active-booking">
+                    szobafoglalás
+                </a>
+            </nav>
+            <article class="reservation-form--container">
+                <form>
+                    <div class="reservation-form grid grid--6-cols">
+                        <div class="reservation-form-el">
+                            <label class="form-text">Adja meg a nevét!
+                                <input type="text" placeholder="Teszt Elek" />
+                        </div>
+                        </label>
+                        <div class="reservation-form-el">
+                            <label class="form-text">Adja meg a telefonszámát!</label>
+                            <input type="tel" placeholder="32342432" />
+                        </div>
+                        <div class="reservation-form-el">
+                            <label class="form-text">Adja meg e-mail címét!
+                                <input type="email" placeholder="tesztelek@gmail.com" />
+                            </label>
+                        </div>
+                        <div class="reservation-form-el">
+                            <label class="form-text">Válasszon időpontot!
+                                <input type="date" class="date" name="date" placeholder="09.01.2023">
+                                <!-- <option value="idopont1">idopont1</option>
+                            <option value="idopont1">idopont1</option>
+                            <option value="idopont1">idopont1</option>
+                            <option value="idopont1">idopont1</option>
+                        </select> -->
+                            </label>
+                        </div>
+                        <div class="reservation-form-el">
+                            <label class="form-text">Hány főre foglal?
+                                <input type="number" name="numberInput" value="0" class="input-reservation">
+                                <!-- <select name="persons">
+                             <option value="foglalás">1 személy</option>
+                            <option value="foglalás">2 személy</option>
+                            <option value="foglalás">3 személy</option>
+                            <option value="foglalás">4 személy</option> -->
+                                <!-- </select> -->
+                            </label>
+                        </div>
+                        <div class="reservation-form-el">
+                            <label class="form-text">Válasszon elhelyezést!
+                                <select name="placement">
+                                    <option value="foglalás">Terasz</option>
+                                    <option value="foglalás">Beltér</option>
+                                    <option value="foglalás">stb</option>
+                                    <option value="foglalás">stb stb</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+                <aside class="reservation-accept-box flex">
+                    <span class="reservation-form-text">
+                        Az e-mailben torteno foglalás legkorabban a foglalást kovetkezo napra lehetseges!<br>
+                        Amennyiben a mai napra ohajt asztalt foglalni kerjuk azt <strong>telefonos
+                            elerhetosegunkon</strong> tegye!
+                    </span>
+                    <div class="reservation-accept flex">
+                    
+                            
+                            
+                            <div class="checkbox-wrapper ">
+                               <form>
+                                <input type="checkbox" name="accept" class="reservation-checkbox" >
+                                <label class="reservation-checkbox-label flex"><span>Elolvastam es elfogadom az
+                            
+                                <strong>Adatkezelesi <br>tajekozoban</strong> foglaltakat!</span></label>
+                            </div>
+                        
+                        <a href="#" class="filled-button flex"><ion-icon name="send-sharp"
+                                class="send-icon"></ion-icon>Foglalás</a>
+                            </form>
+                    </div>
+                </aside>
+            </article>
+        </main>
+        <aside class="cta-container container flex">
+            <div class="cta flex">
+                <img src="images/cta-1.png" class="cta-img">
+                <div class="btn-container flex">
+                    <a href="#" class="cta-btn uppercase">szobáink</a>
+                    <a href="#" class="cta-btn uppercase">foglalás</a>
+                </div>
+            </div>
+            <div class="cta flex">
+                <img src="images/cta-2.png" class="cta-img">
+                <div class="btn-container flex">
+                    <a href="#" class="cta-btn uppercase">Események</a>
+                    <a href="#" class="cta-btn uppercase">Kínálatunk</a>
+                </div>
+            </div>
+            <div class="cta flex">
+                <img src="images/cta-3.png" class="cta-img">
+                <div class="btn-container flex">
+                    <a href="#" class="cta-btn uppercase">Események</a>
+                    <a href="#" class="cta-btn uppercase">foglalás</a>
+                </div>
+            </div>
+
+        </aside>
+    </section>
+    <section class="section-gallery">
+        <div class=" container">
+            <h3 class="heading-tetriary uppercase">Galéria</h3>
+            <h2 class="heading-secondary">Nézze meg képeinket!</h2>
+        </div>
+        <div class="container grid grid-galery">
+
+            <figure class="galery-item">
+                <a href="#">
+                    <img src="images/gallery-1.png" alt="gallery item 1">
+                </a>
+                <a href="#">
+                    <p class="galery-text">Terasz</p>
+                </a>
+            </figure>
+            <figure class="galery-item">
+                <a href="#">
+                    <img src="images/gallery-2.png" alt="gallery item 2">
+                </a>
+                <a href="#">
+                    <p class="galery-text">Captain Drake's pub</p>
+                    <p class="galery-text">étterem</p>
+                </a>
+            </figure>
+            <figure class="galery-item">
+                <a href="#">
+                    <img src="images/gallery-3.png" alt="gallery item 3">
+                </a>
+                <a href="#">
+                    <p class="galery-text">Külön terem</p>
+                </a>
+            </figure>
+
+            <figure class="galery-item">
+                <a href="#">
+                    <img src="images/gallery-4.png" alt="gallery item 4">
+                </a>
+                <a href="#">
+                    <p class="galery-text">Lazy Lounge</p>
+                </a>
+            </figure>
+            <figure class="galery-item">
+                <a href="#">
+                    <img src="images/gallery-5.png" alt="gallery item 5">
+                </a>
+                <a href="#">
+                    <p class="galery-text">Wine & Dine</p>
+                </a>
+            </figure>
+        </div>
+    </section>
+    <section class="section-menu">
+        <div class="container">
+            <div class="menu">
+                <header class="menu-header grid ">
+                    <div class="menu-info-element">
+                        <span class="info-heading">
+                            Ajánlatunk
+                        </span>
+                        <h2 class="heading-secondary ">
+                            <strong>Tekintse meg heti menünket!</strong>
+                        </h2>
+                    </div>
+                    <div class="menu-info-element">
+                        <span class="info-heading">
+                            Nyitvatartás
+                        </span>
+                        <div class="opening-times flex">
+                            <ul class="days">
+                                <li><span>Vasárnap - Csütörtök</span></li>
+                                <li> <span>Konyha</span></li>
+                                <li> <span>Péntek - szombat</span></li>
+                                <li><span>Konyha</span></li>
+                            </ul>
+                            <ul class="opening-hours">
+                                <li><span>11:00 - 22:00</span></li>
+                                <li> <span>11:00 - 21:00</span></li>
+                                <li> <span>11:00 - 23:00</span></li>
+                                <li><span>11:00 - 22:00</span></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="menu-info-element">
+                        <span class="info-heading">
+                            Étlap/Itallap
+                        </span>
+                        <p class="">
+                            Tekintse meg <strong>á la carte étlapunkat</strong> további nem tudom mihez.
+                        </p>
+                    </div>
+                    <div class="menu-info-element">
+                        <span class="info-heading">
+                            asztalfoglalás
+                        </span>
+                        <p class="">
+                            +36 20 278 3229
+                        </p>
+                        <p class="">
+                            +36 20 278 3229
+                        </p>
+                    </div>
+                    <div class="menu-info-element">
+                        <span class="info-heading">
+                            Fizetésilehetőségek
+                        </span>
+                        <p class="">
+                            Éttermünkben elfogadunk készpénzt, bankkártyát és SZÉP kártyát is.
+                        </p>
+
+                    </div>
+                    <div class="menu-info-element">
+                        <span class="info-heading">
+                            Szombat - Vasárnap
+                        </span>
+                        <p class="">
+                            Hétvégén csak elviteles rendelésre van lehetőség.
+                        </p>
+
+                    </div>
+                </header>
+                <article class="menu-grid grid-separator  grid">
+
+                    <div><span> <strong>04.17.-04.23</strong></span></div>
+                    <div><span> <strong>04.17.Hétfő</strong></span></div>
+                    <div><span> <strong>04.18.Kedd</strong></span></div>
+                    <div><span> <strong>04.19.Szerda</strong></span></div>
+                    <div class="menu-active first-active"><span> <strong>04.20.Csütörtök</strong></span></div>
+                    <div><span> <strong>04.21.Péntek</strong></span></div>
+                    <div><span> <strong>Ár</strong></span></div>
+                </article>
+                <article class="menu-grid grid-separator  grid">
+                    <div><span><strong class="uppercase">"A" MENÜ</strong></span></div>
+                    <div class="flex">
+                        <span>Legényfogó leves / Tyúkhúsleves</span>
+                        <span>Csirkemell sokmagvas köntösben rizzsel és vörösboros körtével</span>
+                    </div>
+                    <div class="flex">
+                        <span class="flex">Fokhagymakrémleves / Tyúkhúsleves</span>
+                        <span>Rántott csirkemáj rizi-bizivel és savanyúsággal</span>
+                    </div>
+                    <div class="flex">
+                        <span class="flex">Minestrone leves / Tyúkhúsleves</span>
+                        <span>Cigánypecsenye kakastarélyjal és hasábburgonyával</span>
+                    </div>
+                    <div class="flex menu-active">
+                        <span class="flex">Frankfurti leves / Tyúkhúsleves</span>
+                        <span>Sertésborda rókagomba mártással karika burgonyával</span>
+                    </div>
+                    <div class="flex">
+                        <span class="flex">Zelleres burgonyakrémleves / Tyúkhúsleves</span>
+                        <span>Cheddar sajttal töltött csirkemell bacon köntösben hasábburgonyával</span>
+                    </div>
+                    <div class="flex">
+                        <span>Leves <br>+ Főétel <strong>2490Ft</strong></span>
+
+                    </div>
+                </article>
+                <article class="menu-grid grid-separator  grid">
+                    <div><span><strong class="uppercase">"B" MENÜ</strong></span></div>
+                    <div class="flex">
+                        <span>Legényfogó leves / Tyúkhúsleves</span>
+                        <span>Csirkemell sokmagvas köntösben rizzsel és vörösboros körtével</span>
+                    </div>
+                    <div class="flex">
+                        <span class="flex">Fokhagymakrémleves / Tyúkhúsleves</span>
+                        <span>Rántott csirkemáj rizi-bizivel és savanyúsággal</span>
+                    </div>
+                    <div class="flex">
+                        <span class="flex">Minestrone leves / Tyúkhúsleves</span>
+                        <span>Cigánypecsenye kakastarélyjal és hasábburgonyával</span>
+                    </div>
+                    <div class="flex menu-active">
+                        <span class="flex">Frankfurti leves / Tyúkhúsleves</span>
+                        <span>Sertésborda rókagomba mártással karika burgonyával</span>
+                    </div>
+                    <div class="flex">
+                        <span class="flex">Zelleres burgonyakrémleves / Tyúkhúsleves</span>
+                        <span>Cheddar sajttal töltött csirkemell bacon köntösben hasábburgonyával</span>
+                    </div>
+                    <div class="flex">
+                        <span>Leves <br>+ Főétel <strong>2490Ft</strong></span>
+
+                    </div>
+                </article>
+                <article class="menu-grid grid-separator  grid">
+                    <div><span><strong class="uppercase">"RETRO" MENÜ</strong></span></div>
+                    <div class="flex">
+                        <span>Legényfogó leves / Tyúkhúsleves</span>
+                        <span>Csirkemell sokmagvas köntösben rizzsel és vörösboros körtével</span>
+                    </div>
+                    <div class="flex">
+                        <span class="flex">Fokhagymakrémleves / Tyúkhúsleves</span>
+                        <span>Rántott csirkemáj rizi-bizivel és savanyúsággal</span>
+                    </div>
+                    <div class="flex">
+                        <span class="flex">Minestrone leves / Tyúkhúsleves</span>
+                        <span>Cigánypecsenye kakastarélyjal és hasábburgonyával</span>
+                    </div>
+                    <div class="flex menu-active">
+                        <span class="flex">Frankfurti leves / Tyúkhúsleves</span>
+                        <span>Sertésborda rókagomba mártással karika burgonyával</span>
+                    </div>
+                    <div class="flex">
+                        <span class="flex">Zelleres burgonyakrémleves / Tyúkhúsleves</span>
+                        <span>Cheddar sajttal töltött csirkemell bacon köntösben hasábburgonyával</span>
+                    </div>
+                    <div class="flex">
+                        <span>Leves <br>+ Főétel <strong>2490Ft</strong></span>
+
+                    </div>
+                </article>
+                <article class="menu-grid grid-separator grid">
+                    <div class="flex">
+                        <span><strong class="uppercase">"Jolly Joker" MENÜ</strong></span>
+                        <span><strong class="uppercase">"Hétfőtől - Péntekig Minden Nap </strong></span>
+                    </div>
+                    <div class="flex">
+                        <span>Rántott sajt vagy rántott csirke vagy roston csirke</span>
+                        <span>Választható körettel rizzsel vagy hasábburgonyával</span>
+                    </div>
+                    <div class="flex">
+                        <span>Rántott sajt vagy rántott csirke vagy roston csirke</span>
+                        <span>Választható körettel rizzsel vagy hasábburgonyával</span>
+                    </div>
+                    <div class="flex">
+                        <span>Rántott sajt vagy rántott csirke vagy roston csirke</span>
+                        <span>Választható körettel rizzsel vagy hasábburgonyával</span>
+                    </div>
+                    <div class="flex menu-active">
+                        <span>Rántott sajt vagy rántott csirke vagy roston csirke</span>
+                        <span>Választható körettel rizzsel vagy hasábburgonyával</span>
+                    </div>
+                    <div class="flex">
+                        <span>Rántott sajt vagy rántott csirke vagy roston csirke</span>
+                        <span>Választható körettel rizzsel vagy hasábburgonyával</span>
+                    </div>
+                    <div class="flex">
+                        <span><strong>2190Ft</strong></span>
+
+                    </div>
+                </article>
+                <article class="menu-grid  grid">
+                    <div class="flex">
+                        <span><strong class="uppercase">Desszert</strong></span>
+                    </div>
+                    <div class="flex">
+                        <span>Somlói Galuska</span>
+                    </div>
+                    <div class="flex">
+                        <span>Répatorta</span>
+                    </div>
+                    <div class="flex">
+                        <span>Tiramisu</span>
+                    </div>
+                    <div class="flex menu-active last-active">
+                        <span>Almás pite</span>
+                    </div>
+                    <div class="flex">
+                        <span>Somlói galuska</span>
+                    </div>
+                    <div class="flex">
+                        <span><strong class="uppercase">Ajándék</strong></span>
+
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="section-about-us">
+        <div class="container">
+            <div class="about-us">
+                <div class="about-us-imagebox" role="img" aria-label="Győri Rába part éjszaka"></div>
+
+                <div class="about-us-textbox grid">
+
+                    <article class="text-box">
+                        <h3 class="heading-tetriary uppercase">Rólunk </h3>
+                        <h1 class="heading-secondary"><strong>Ismerjen meg minket!</strong></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet malesuada nibh ac
+                            egestas. Pellentesque rutrum nisi vel enim vestibulum, sit amet fringilla magna tincidunt.
+                        </p>
+                    </article>
+                    <article class="text-box">
+
+                        <p> Fusce facilisis dolor quis libero dictum malesuada. Suspendisse facilisis eget quam id
+                            pretium. In sodales, nisi at interdum imperdiet.
+                        </p>
+                        <p>
+                            Donec consectetur consequat mauris in aliquet. Phasellus iaculis, quam et dictum lacinia,
+                            diam lacus vestibulum lorem, ullamcorper tempor leo.
+                        </p>
+                    </article>
+                    <article class="text-box">
+                        <p>
+                            Curabitur sed sem velit. Sed a felis porta, aliquam mi sit amet, viverra nulla. Nunc varius
+                            faucibus tellus, quis vulputate lectus malesuada in. </p>
+                        <p>Cras eleifend, quam sit amet ultrices gravida, tortor nisl semper nisl, quis dapibus nisi
+                            lorem non nisl.. </p>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-box ">
+                <h3 class="heading-tetriary uppercase">
+                    kapcsolat
+                </h3>
+
+                <div class=" grid grid-footer">
+
+                    <div>
+                        <h2 class="heading-secondary"><strong>Elérhetőségeink</strong></h2>
+
+                        <div class="contacts-nav flex">
+
+                            <div class="contacts">
+                                <div class="contact-num flex">
+                                    <div class="flex contact-flex">
+                                        <p class="uppercase" href="#">asztalfoglalás</p>
+                                        <a class="uppercase" href="#"><strong>+36 21 253 0102</strong></a>
+
+                                    </div>
+                                    <div class="flex contact-flex">
+                                        <p class="uppercase" href="#">Recepció(0-24)</p>
+                                        <a class="uppercase" href="#"><strong>+36 96 617 0425</strong></a>
+                                    </div>
+                                </div>
+                                <div class="contact-others">
+                                <p class="uppercase" href="#"><strong>+36 96 617 452</strong></p>
+                                <p class="uppercase">Címünk</p>
+                                <a href="#">9025 Győr, Radó-sziget 1.</a>
+                                <p class="uppercase">E-mail címünk</p>
+                                <a href="#"><strong>recepcio@aranyszarvasgyor.hu</strong></a>
+                                <p class="uppercase">social media</p>
+                                <a href="#" class="hero-nav--text with-logo"><img class="social-logo"
+                                        src="images/facebook.png" alt="facebook logo">
+                                    <p>aranyszarvasfogadogyor</p>
+                                </a>
+                                <a href="#" class="hero-nav--text with-logo"><img class="social-logo"
+                                        src="images/instagram.png" alt="instagram logo"> captaindrakespub</a>
+                            </div>
+                            </div>
+                            <div class="footer-navigation flex">
+                                <p class="uppercase">navigáció</p>
+                                <div class="footer-nav uppercase  ">
+                                    <ul>
+                                        <li><a href="#" class="hero-nav--text"><strong>kezdőlap</strong></a></li>
+                                        <li><a href="#" class="hero-nav--text"><strong>RÓLUNK</strong></a></li>
+                                        <li><a href="#" class="hero-nav--text"><strong>étterem</strong> </a></li>
+                                        <li><a href="#" class="hero-nav--text"><strong>foglalás</strong> </a></li>
+                                        <li><a href="#" class="hero-nav--text"><strong>étel/itallap</strong></a></li>
+                                        <li><a href="#" class="hero-nav--text"><strong>heti menü</strong></a></li>
+                                        <li><a href="#" class="hero-nav--text"><strong>hotel</strong></a></li>
+                                        <li><a href="#" class="hero-nav--text"><strong>wine & dine</strong></a></li>
+                                        <li> <a href="#" class="hero-nav--text"><strong>galéria</strong></a></li>
+                                        <li><a href="#" class="hero-nav--text"><strong>események</strong></a></li>
+                                        <li><a href="#" class="hero-nav--text"><strong>karrier</strong></a></li>
+                                        <li><a href="#" class="hero-nav--text"><strong>kapcsolat</strong></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="heading-secondary"><strong>Írjon nekünk!</strong></h2>
+
+                        <div class="footer-form-container">
+                            <form>
+                                <div class="form-container flex">
+                                    <div class="footer-form flex">
+
+                                        <div class="reservation-form-el">
+                                            <label class="form-text">Adja meg a nevét!</label>
+                                            <input type="text" placeholder="Teszt Elek" />
+                                        </div>
+
+
+                                        <div class="reservation-form-el">
+                                            <label class="form-text">Adja meg e-mail címét!</label>
+                                            <input type="email" placeholder="tesztelek@gmail.com" />
+
+                                        </div>
+                                        <div class="reservation-form-el">
+                                            <label class="form-text">Adja meg a telefonszámát!</label>
+                                            <input type="tel" placeholder="32342432" />
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <textarea class="textarea" placeholder="Uzenet szovege bla bla bla"></textarea>
+
+                               
+                        </div>
+                        <div class="checkbox-wrapper footer-form-accept flex">
+                            <form>
+                             <input type="checkbox" name="accept" class="footer-checkbox"  >
+                             <label class="footer-checkbox-label flex"><span>Elolvastam es elfogadom az
+                         
+                                 <strong>Adatkezelesi tajekozoban</strong> foglaltakat!</span></label>    
+                                 
+                                                                 <a href="#" class="footer-form-button filled-button flex"><ion-icon name="send-sharp"
+                                                                         class="send-icon"></ion-icon>Foglalás</a>
+
+                         </div>    
+
+
+
+
+                                                        
+
+
+                            </form>
+
+
+                          
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <iframe class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2685.8499076006747!2d17.626444077677014!3d47.687334771197264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476bbfe40dd9984d%3A0xd2fdb4e273c28476!2sArany%20Szarvas%20Fogad%C3%B3%20%C3%A9s%20Captain%20Drake&#39;s%20Pub!5e0!3m2!1shu!2shu!4v1694024288269!5m2!1shu!2shu"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </footer>
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js" defer></script>
+
+
+
+</body>
+
+</html>
